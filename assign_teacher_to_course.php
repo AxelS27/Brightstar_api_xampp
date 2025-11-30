@@ -14,7 +14,6 @@ if (!$teacherId || !$courseTypeId) {
     exit;
 }
 
-// Cek apakah sudah ada
 $stmt = $pdo->prepare("SELECT id FROM teacher_courses WHERE teacher_id = ? AND course_type_id = ?");
 $stmt->execute([$teacherId, $courseTypeId]);
 if ($stmt->fetch()) {
