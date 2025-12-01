@@ -46,7 +46,6 @@ if ($startDate) {
     $sql .= " AND cs.session_date >= :startDate";
     $params[':startDate'] = $startDate;
 }
-
 if ($endDate) {
     $sql .= " AND cs.session_date <= :endDate";
     $params[':endDate'] = $endDate;
